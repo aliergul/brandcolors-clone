@@ -1,7 +1,12 @@
 import "./App.css";
+import Sidebar from "./components/Sidebar";
 
 function App() {
-  return <h3>test</h3>;
+  return (
+    <>
+      <Sidebar />
+    </>
+  );
 }
 
 export default App;
