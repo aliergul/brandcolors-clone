@@ -1,6 +1,13 @@
-import React from "react";
+import React, { useState } from "react";
+import InfoModal from "./InfoModal";
 
 const Sidebar = () => {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  const handleModal = () => {
+    setIsModalOpen(!isModalOpen);
+  };
+
   return (
     <>
       <aside className="sidebar">
@@ -16,11 +23,12 @@ const Sidebar = () => {
         <nav className="menu">
           <ul>
             <li>
-              <a>About BrandColors</a>
+              <a onClick={handleModal}>About BrandColors</a>
             </li>
           </ul>
         </nav>
       </aside>
+      <InfoModal open={isModalOpen} handleModal={handleModal} />
     </>
   );
 };
