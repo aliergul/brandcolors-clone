@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import InfoModal from "../InfoModal";
+import InfoModal from "./InfoModal";
 import Title from "./Title";
 import Description from "./Description";
 import Menu from "./Menu";
