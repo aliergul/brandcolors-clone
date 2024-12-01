@@ -143,20 +143,28 @@ body {
 }
 
 .info-modal {
-  max-width: 720px;
-  background: #fff;
-  box-shadow: 0 0 15px 0 rgba($color: #000000, $alpha: 0.1);
-  padding: 50px;
   position: relative;
+  width: 100%;
+  max-width: 720px;
+  margin: auto;
+  padding: 4vw;
+  background-color: white;
+  -webkit-box-shadow: 0 10px 60px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 10px 60px rgba(0, 0, 0, 0.1);
 
   h3 {
-    font-size: 26px;
-    margin-bottom: 25px;
+    margin-bottom: 0.7em;
+    font-size: 24px;
   }
   p {
-    font-size: 18px;
-    line-height: 1.8;
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 400;
     margin-bottom: 20px;
+    color: rgb(96, 125, 139);
+    b {
+      color: black;
+    }
   }
 
   .modal-close-btn {
