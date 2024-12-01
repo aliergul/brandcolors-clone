@@ -9,22 +9,22 @@ const SocialMedia = () => {
     {
       name: "twitter",
       icon: <FaTwitter />,
-      color: "#0091f6",
+      color: "#1da1f2",
     },
     {
       name: "facebook",
       icon: <FaFacebookF />,
-      color: "#3e489a",
+      color: "#3b5998",
     },
     {
       name: "linkedin",
       icon: <FaLinkedinIn />,
-      color: "#006bb8",
+      color: "#0077b5",
     },
     {
       name: "pinterest",
       icon: <FaPinterest />,
-      color: "#d40000",
+      color: "#bd081c",
     },
   ];
   return items.map((item, i) => (
