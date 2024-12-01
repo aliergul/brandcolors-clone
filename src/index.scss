@@ -32,8 +32,8 @@ body {
 }
 
 .sidebar {
-  width: 320px;
-  min-width: 320px;
+  width: 350px;
+  min-width: 350px;
   border-right: 1px solid #e0e0e0;
   padding: 30px 40px;
   .logo {
@@ -111,6 +111,33 @@ body {
     &:hover {
       color: #0099e5;
     }
+  }
+}
+
+.social-media {
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  bottom: 0;
+  width: 270px;
+  text-align: center;
+  a {
+    cursor: pointer;
+    -webkit-box-flex: 1;
+    -ms-flex: 1 0 auto;
+    flex: 1 0 auto;
+    position: relative;
+    display: block;
+    padding: 12px 8px;
+    color: white;
+  }
+  a:hover {
+    transform: scale(1.2);
+    z-index: 1;
+  }
+  svg {
+    width: 24px;
+    height: 24px;
   }
 }
 

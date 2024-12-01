@@ -4,6 +4,7 @@ import Title from "./Title";
 import Description from "./Description";
 import Menu from "./Menu";
 import Promo from "./Promo";
+import SocialMedia from "./SocialMedia";
 
 const Sidebar = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -26,6 +27,9 @@ const Sidebar = () => {
         </nav>
         <div className="promo">
           <Promo />
+        </div>
+        <div className="social-media">
+          <SocialMedia />
         </div>
       </aside>
       <InfoModal open={isModalOpen} handleModal={handleModal} />
