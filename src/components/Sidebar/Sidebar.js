@@ -1,5 +1,9 @@
 import React, { useState } from "react";
-import InfoModal from "./InfoModal";
+import InfoModal from "../InfoModal";
+import Title from "./Title";
+import Description from "./Description";
+import Menu from "./Menu";
+import Promo from "./Promo";
 
 const Sidebar = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -12,21 +16,17 @@ const Sidebar = () => {
     <>
       <aside className="sidebar">
         <div className="logo">
-          <a>
-            Brand<b>Colors</b>
-          </a>
+          <Title />
         </div>
         <div className="description">
-          The biggest collection of official brand color codes around. Curated
-          by @brandcolors and friends.
+          <Description />
         </div>
         <nav className="menu">
-          <ul>
-            <li>
-              <a onClick={handleModal}>About BrandColors</a>
-            </li>
-          </ul>
+          <Menu handleModal={handleModal} />
         </nav>
+        <div className="promo">
+          <Promo />
+        </div>
       </aside>
       <InfoModal open={isModalOpen} handleModal={handleModal} />
     </>
