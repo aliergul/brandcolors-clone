@@ -2,7 +2,7 @@ import React from "react";
 
 const Promo = () => {
   return (
-    <div>
+    <div className="test">
       <span>
         Brand<strong>Colors</strong> + DesignBombs
       </span>

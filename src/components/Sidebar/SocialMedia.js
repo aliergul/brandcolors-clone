@@ -28,7 +28,11 @@ const SocialMedia = () => {
     },
   ];
   return items.map((item, i) => (
-    <a key={i} href style={{ color: "white", backgroundColor: item.color }}>
+    <a
+      key={i}
+      href="true"
+      style={{ color: "white", backgroundColor: item.color }}
+    >
       {item.icon}
     </a>
   ));
