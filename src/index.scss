@@ -240,9 +240,13 @@ a {
       }
     }
   }
-
   .brands {
     .brand-items {
+      display: flex;
+      position: relative;
+      padding: 15px 15px 15px 0;
+      margin-left: 15px;
+      border-bottom: solid 1px #e0e0e0;
       .brand-titles {
         display: flex;
         align-items: center;
@@ -252,12 +256,18 @@ a {
         color: rgb(38, 50, 56);
         width: 25%;
         cursor: pointer;
+        .done-icon {
+          color: #2196f3;
+          width: 24px;
+          height: 24px;
+          left: -28px;
+          top: 24px;
+          background: white;
+          position: absolute;
+          z-index: 999;
+          overflow: hidden !important;
+        }
       }
-      display: flex;
-      position: relative;
-      padding: 15px 15px 15px 0;
-      margin-left: 15px;
-      border-bottom: solid 1px #e0e0e0;
     }
     .brand-colors {
       display: flex;
@@ -278,5 +288,18 @@ a {
         text-indent: -9999px;
       }
     }
+    .brand-items.selected .brand-colors span {
+      text-indent: 0;
+      flex: 1;
+    }
+  }
+  .done-icon {
+    color: #2196f3;
+    width: 24px;
+    height: 24px;
+    left: 300px;
+    top: 24px;
+    background: white;
+    position: absolute;
   }
 }
