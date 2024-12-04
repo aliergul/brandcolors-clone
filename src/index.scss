@@ -201,6 +201,20 @@ a {
   background: rgba($color: #fff, $alpha: 0.8);
 }
 
+.copied {
+  position: fixed;
+  right: 15px;
+  bottom: 15px;
+  padding: 15px;
+  background: var(--bgColor);
+  color: var(--textColor);
+  border: 1px solid #e0e0e0;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+  pointer-events: none;
+  z-index: 20;
+}
+
 .content {
   flex-grow: 1;
   display: flex;
@@ -268,6 +282,11 @@ a {
         }
       }
     }
+
+    .brand-items.selected .brand-titles {
+      font-weight: bold;
+    }
+
     .brand-colors {
       display: flex;
       width: 100%;
@@ -285,11 +304,29 @@ a {
         border-radius: 5px;
         cursor: pointer;
         text-indent: -9999px;
+        svg {
+          display: none;
+        }
+        &:hover {
+          svg {
+            display: inherit;
+          }
+        }
       }
     }
+
     .brand-items.selected .brand-colors span {
-      text-indent: 0;
       flex: 1;
+      gap: 10px;
+      &:hover {
+        text-indent: 0;
+        font-size: 14px;
+        line-height: 24px;
+        font-family: monospace;
+        svg {
+          display: inherit;
+        }
+      }
     }
   }
   .done-icon {

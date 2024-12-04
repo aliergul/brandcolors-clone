@@ -2,9 +2,12 @@ import MainContext from "components/MainContext";
 import React, { useContext } from "react";
 import getContrast from "utils/colorContrast";
 import { MdDone } from "react-icons/md";
+import { MdOutlineContentCopy } from "react-icons/md";
+import ClipboardButton from "react-clipboard.js";
 
 const Brands = ({ brand }) => {
-  const { selectedBrands, setSelectedBrands } = useContext(MainContext);
+  const { selectedBrands, setSelectedBrands, setCopied } =
+    useContext(MainContext);
 
   const handleSelect = () => {
     if (selectedBrands.includes(brand.slug)) {
@@ -12,6 +15,10 @@ const Brands = ({ brand }) => {
     } else {
       setSelectedBrands([...selectedBrands, brand.slug]);
     }
+  };
+
+  const handleCopy = (color) => {
+    setCopied(color);
   };
 
   return (
@@ -28,15 +35,18 @@ const Brands = ({ brand }) => {
       </span>
       <div className="brand-colors">
         {brand.colors.map((color, i) => (
-          <span
+          <ClipboardButton
             key={i}
+            component="span"
+            data-clipboard-text={color}
             style={{
               "--bgColor": `#${color}`,
               "--textColor": `${getContrast(color)}`,
             }}
+            onSuccess={() => handleCopy(color)}
           >
-            {color}
-          </span>
+            <MdOutlineContentCopy style={{ width: 24, height: 24 }} />#{color}
+          </ClipboardButton>
         ))}
       </div>
     </div>
