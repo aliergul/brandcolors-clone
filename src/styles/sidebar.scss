@@ -1,0 +1,58 @@
+.sidebar {
+  width: 350px;
+  min-width: 350px;
+  padding: 30px 40px;
+  .logo {
+    margin-bottom: 25px;
+    display: flex;
+    align-items: center;
+    position: relative;
+    img {
+      width: 40px;
+      height: 40px;
+      position: relative;
+      left: -20px;
+    }
+    a {
+      cursor: pointer;
+      font-size: 24px;
+      font-weight: 400;
+      text-decoration: none;
+      color: #333333;
+      &:hover {
+        color: #0099e5;
+      }
+    }
+  }
+  .description {
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 400;
+    color: rgb(96, 125, 139);
+    margin-bottom: 25px;
+    a {
+      cursor: pointer;
+      &:hover {
+        color: #0099e5;
+      }
+    }
+  }
+  .menu {
+    padding-bottom: 20px;
+    border-bottom: 1px solid #e0e0e0;
+    line-height: 2;
+    ul {
+      li {
+        a {
+          display: block;
+          font-weight: 600;
+          color: #333;
+          cursor: pointer;
+          &:hover {
+            color: #0099e5;
+          }
+        }
+      }
+    }
+  }
+}

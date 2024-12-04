@@ -1,0 +1,22 @@
+.promo {
+  display: block;
+  margin-top: 20px;
+  padding-bottom: 20px;
+  border-bottom: solid 1px #e0e0e0;
+  cursor: pointer;
+  span {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 16px;
+    color: #263238;
+  }
+  p {
+    font-size: 14px;
+    line-height: 21px;
+    font-weight: 400;
+    color: rgb(96, 125, 139);
+    &:hover {
+      color: #0099e5;
+    }
+  }
+}

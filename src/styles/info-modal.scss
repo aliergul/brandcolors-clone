@@ -1,0 +1,54 @@
+.info-modal {
+  position: relative;
+  width: 100%;
+  max-width: 720px;
+  margin: auto;
+  padding: 4vw;
+  background-color: white;
+  -webkit-box-shadow: 0 10px 60px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 10px 60px rgba(0, 0, 0, 0.1);
+
+  h3 {
+    margin-bottom: 0.7em;
+    font-size: 24px;
+  }
+  p {
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 400;
+    margin-bottom: 20px;
+    color: rgb(96, 125, 139);
+    b {
+      color: black;
+    }
+  }
+
+  .modal-close-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    width: 35px;
+    height: 35px;
+    background: #ddd;
+    cursor: pointer;
+    svg {
+      width: 15px;
+      height: 15px;
+    }
+  }
+}
+
+.info-modal-overlay {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  position: fixed;
+  background: rgba($color: #fff, $alpha: 0.8);
+}

@@ -1,0 +1,13 @@
+.copied {
+  position: fixed;
+  right: 15px;
+  bottom: 15px;
+  padding: 15px;
+  background: var(--bgColor);
+  color: var(--textColor);
+  border: 1px solid #e0e0e0;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+  pointer-events: none;
+  z-index: 20;
+}
