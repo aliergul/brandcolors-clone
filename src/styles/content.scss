@@ -72,6 +72,25 @@
             color: black;
           }
         }
+        .download {
+          display: flex;
+          align-items: center;
+          gap: 5px;
+          position: relative;
+          select {
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            appearance: none;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 50%;
+            height: 100%;
+            border: none;
+            opacity: 0;
+            cursor: pointer;
+          }
+        }
       }
       .tools.selected {
         color: #617e8a;
