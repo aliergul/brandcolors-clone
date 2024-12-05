@@ -12,6 +12,7 @@ function App() {
   const [brands, setBrands] = useState(brandsArray);
   const [selectedBrands, setSelectedBrands] = useState([]);
   const [copied, setCopied] = useState(false);
+  const [search, setSearch] = useState("");
 
   const data = {
     brands,
@@ -19,7 +20,15 @@ function App() {
     selectedBrands,
     setSelectedBrands,
     setCopied,
+    search,
+    setSearch,
   };
+
+  useEffect(() => {
+    setBrands(
+      brandsArray.filter((brand) => brand.title.toLowerCase().includes(search))
+    );
+  }, [search]); //eslint-disable-line
 
   useEffect(() => {
     const timeout = setTimeout(() => {
