@@ -4,7 +4,7 @@ const Description = () => {
   return (
     <div>
       The biggest collection of official brand color codes around. Curated by
-      <a href="true"> @brandcolors</a> and <a href="true"> friends</a>.
+      <span> @brandcolors</span> and <span> friends</span>.
     </div>
   );
 };

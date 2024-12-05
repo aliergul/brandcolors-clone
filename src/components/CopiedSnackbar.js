@@ -4,7 +4,7 @@ import getContrast from "utils/colorContrast";
 const CopiedSnackbar = ({ color }) => {
   return (
     <div
-      className="copied"
+      className={`copied ${color ? "visible" : ""} `}
       style={{
         "--bgColor": `#${color}`,
         "--textColor": `${getContrast(color)}`,

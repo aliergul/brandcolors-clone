@@ -6,8 +6,16 @@
   background: var(--bgColor);
   color: var(--textColor);
   border: 1px solid #e0e0e0;
-  -webkit-transition: 0.2s;
-  transition: 0.2s;
   pointer-events: none;
   z-index: 20;
+
+  opacity: 0;
+  transform: translateY(20px);
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+
+.copied.visible {
+  opacity: 1;
+  transform: translateY(0);
 }

@@ -4,7 +4,7 @@
   flex-direction: column;
   border-left: 1px solid #e0e0e0;
   .header {
-    height: 50px;
+    height: 55px;
     border-bottom: 1px solid #e0e0e0;
     display: flex;
     position: sticky;
@@ -13,8 +13,12 @@
     z-index: 10;
     .search {
       flex: 1;
+      display: flex;
       font-size: 16px;
       position: relative;
+      width: 100%;
+      justify-content: space-between;
+      margin-right: 10px;
       .icon {
         position: absolute;
         top: 0;
@@ -32,9 +36,44 @@
       }
       input {
         color: #607d8b;
-        width: 100%;
         height: 100%;
         padding: 0 20px 0 60px;
+      }
+
+      .tools {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 5px;
+        color: #cbd5d8;
+        font-size: 14px;
+        font-weight: 400;
+        svg {
+          width: 24px;
+          height: 24px;
+          color: var(--color);
+        }
+        .collection {
+          margin-bottom: 5px;
+          margin-right: 15px;
+          padding-right: 15px;
+          border-right: solid 1px #e0e0e0;
+        }
+        .all-brands {
+          display: flex;
+          align-items: center;
+          font-size: 14px;
+          font-weight: 400;
+          gap: 5px;
+          color: #617e8a;
+          cursor: pointer;
+        }
+      }
+      .tools.selected {
+        color: #617e8a;
+        svg {
+          cursor: pointer;
+        }
       }
     }
   }

@@ -30,7 +30,7 @@
     font-weight: 400;
     color: rgb(96, 125, 139);
     margin-bottom: 25px;
-    a {
+    span {
       cursor: pointer;
       &:hover {
         color: #0099e5;
@@ -43,7 +43,7 @@
     line-height: 2;
     ul {
       li {
-        a {
+        span {
           display: block;
           font-weight: 600;
           color: #333;

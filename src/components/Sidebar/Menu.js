@@ -4,12 +4,10 @@ const Menu = ({ handleModal }) => {
   return (
     <ul>
       <li>
-        <a href="true">Suggest a Brand</a>
+        <span>Suggest a Brand</span>
       </li>
       <li>
-        <a href="true" onClick={handleModal}>
-          About BrandColors
-        </a>
+        <span onClick={handleModal}>About BrandColors</span>
       </li>
     </ul>
   );
