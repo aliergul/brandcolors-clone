@@ -2,6 +2,7 @@ import React, { useContext } from "react";
 import Header from "./Header";
 import Brands from "./Brands";
 import MainContext from "components/MainContext";
+import LazyLoad from "react-lazyload";
 
 const Content = () => {
   const { brands } = useContext(MainContext);
@@ -12,7 +13,9 @@ const Content = () => {
       </header>
       <section className="brands">
         {brands.map((brand, i) => (
-          <Brands key={i} brand={brand} />
+          <LazyLoad once={true} placeholder="Loading...">
+            <Brands key={i} brand={brand} />
+          </LazyLoad>
         ))}
       </section>
     </main>
