@@ -4,6 +4,7 @@ import getContrast from "utils/colorContrast";
 import { MdDone } from "react-icons/md";
 import { MdOutlineContentCopy } from "react-icons/md";
 import ClipboardButton from "react-clipboard.js";
+import BrandsFooter from "./BrandsFooter";
 
 const Brands = ({ brand }) => {
   const { selectedBrands, setSelectedBrands, setCopied } =
@@ -22,33 +23,36 @@ const Brands = ({ brand }) => {
   };
 
   return (
-    <div
-      className={`brand-items ${
-        selectedBrands.includes(brand.slug) ? "selected" : ""
-      }`}
-    >
-      <span onClick={handleSelect} className="brand-titles">
-        {selectedBrands.includes(brand.slug) && (
-          <MdDone className="done-icon" />
-        )}
-        {brand.title}
-      </span>
-      <div className="brand-colors">
-        {brand.colors.map((color, i) => (
-          <ClipboardButton
-            key={i}
-            component="span"
-            data-clipboard-text={color}
-            style={{
-              "--bgColor": `#${color}`,
-              "--textColor": `${getContrast(color)}`,
-            }}
-            onSuccess={() => handleCopy(color)}
-          >
-            <MdOutlineContentCopy style={{ width: 24, height: 24 }} />#{color}
-          </ClipboardButton>
-        ))}
+    <div className="brands-main">
+      <div
+        className={`brand-items ${
+          selectedBrands.includes(brand.slug) ? "selected" : ""
+        }`}
+      >
+        <span onClick={handleSelect} className="brand-titles">
+          {selectedBrands.includes(brand.slug) && (
+            <MdDone className="done-icon" />
+          )}
+          {brand.title}
+        </span>
+        <div className="brand-colors">
+          {brand.colors.map((color, i) => (
+            <ClipboardButton
+              key={i}
+              component="span"
+              data-clipboard-text={color}
+              style={{
+                "--bgColor": `#${color}`,
+                "--textColor": `${getContrast(color)}`,
+              }}
+              onSuccess={() => handleCopy(color)}
+            >
+              <MdOutlineContentCopy style={{ width: 24, height: 24 }} />#{color}
+            </ClipboardButton>
+          ))}
+        </div>
       </div>
+      {selectedBrands.includes(brand.slug) && <BrandsFooter brand={brand} />}
     </div>
   );
 };

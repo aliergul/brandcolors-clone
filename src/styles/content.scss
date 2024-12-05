@@ -3,6 +3,7 @@
   display: flex;
   flex-direction: column;
   border-left: 1px solid #e0e0e0;
+
   .header {
     height: 55px;
     border-bottom: 1px solid #e0e0e0;
@@ -67,23 +68,60 @@
           gap: 5px;
           color: #617e8a;
           cursor: pointer;
+          &:hover {
+            color: black;
+          }
         }
       }
       .tools.selected {
         color: #617e8a;
         svg {
           cursor: pointer;
+          &:hover {
+            color: black;
+          }
         }
       }
     }
   }
+
   .brands {
+    .brands-main {
+      border-bottom: solid 1px #e0e0e0;
+      margin-left: 15px;
+    }
+    .brand-footer {
+      display: flex;
+      gap: 5px;
+      align-items: center;
+      margin: 15px 0 15px 0;
+      color: #617e8a;
+      font-size: 14px;
+      font-weight: 400;
+      a {
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+    .brand-footer span::before,
+    .brand-footer a::before {
+      content: "\2022";
+      margin: 10px;
+      text-decoration: none;
+      display: inline-block;
+    }
+    .brand-footer span:first-child::before,
+    .brand-footer a:first-child::before {
+      content: "";
+      margin: 0;
+    }
+
     .brand-items {
       display: flex;
       position: relative;
       padding: 15px 15px 15px 0;
-      margin-left: 15px;
-      border-bottom: solid 1px #e0e0e0;
+
       .brand-titles {
         display: flex;
         align-items: center;
@@ -151,6 +189,7 @@
       }
     }
   }
+
   .done-icon {
     color: #2196f3;
     width: 24px;
