@@ -5,7 +5,7 @@ import downloadMethod from "utils/downloadMethod";
 
 const Download = () => {
   const { brands, selectedBrands } = useContext(MainContext);
-  const [cssMethod, setCssMethod] = useState("css");
+  const [cssMethod, setCssMethod] = useState("");
 
   const handleChange = (e) => {
     const selectedFormat = e.target.value;
@@ -32,6 +32,7 @@ const Download = () => {
     <div className="download">
       {selectedBrands.length > 0 && (
         <select value={cssMethod} onChange={handleChange}>
+          <option value={""}></option>
           <option value={"ase"}>ASE (Adobe)</option>
           <option value={"css"}>CSS</option>
           <option value={"scss"}>SCSS</option>
