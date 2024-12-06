@@ -89,6 +89,30 @@
             opacity: 0;
             cursor: pointer;
           }
+
+          .custom-dropdown {
+            position: relative;
+            display: inline-block;
+          }
+          .dropdown-options {
+            position: absolute;
+            background: white;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            z-index: 1000;
+          }
+
+          .dropdown-options li {
+            padding: 8px 12px;
+            cursor: pointer;
+          }
+
+          .dropdown-options li:hover {
+            background-color: #f0f0f0;
+          }
         }
       }
       .tools.selected {

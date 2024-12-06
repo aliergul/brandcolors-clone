@@ -1,51 +1,35 @@
+import Dropdown from "components/Dropdown";
 import MainContext from "components/MainContext";
-import React, { useContext, useState } from "react";
-import { MdDownload } from "react-icons/md";
+import React, { useContext, useEffect, useState } from "react";
 import downloadMethod from "utils/downloadMethod";
 
 const Download = () => {
   const { brands, selectedBrands } = useContext(MainContext);
   const [cssMethod, setCssMethod] = useState("");
 
-  const handleChange = (e) => {
-    const selectedFormat = e.target.value;
-    setCssMethod(selectedFormat);
-    handleDownload(selectedFormat);
-  };
-
-  const handleDownload = (selectedFormat) => {
+  const handleDownload = () => {
     if (selectedBrands.length > 0) {
       const blob = new Blob([
-        downloadMethod(selectedFormat, selectedBrands, brands),
+        downloadMethod(cssMethod, selectedBrands, brands),
       ]);
       const url = URL.createObjectURL(blob);
 
       const a = document.createElement("a");
       a.href = url;
-      a.download = `brands.${selectedFormat}`;
+      a.download = `brands.${cssMethod}`;
       a.click();
 
       URL.revokeObjectURL(url);
     }
   };
+
+  useEffect(() => {
+    handleDownload();
+  }, [cssMethod]); //eslint-disable-line
+
   return (
     <div className="download">
-      {selectedBrands.length > 0 && (
-        <select value={cssMethod} onChange={handleChange}>
-          <option value={""}></option>
-          <option value={"ase"}>ASE (Adobe)</option>
-          <option value={"css"}>CSS</option>
-          <option value={"scss"}>SCSS</option>
-          <option value={"less"}>LESS</option>
-          <option value={"stylus"}>Stylus</option>
-        </select>
-      )}
-
-      <MdDownload
-        style={{
-          "--color": `${selectedBrands.length > 0 ? "#617e8a" : "#cbd5d8"} `,
-        }}
-      />
+      <Dropdown selectedBrands={selectedBrands} setCssMethod={setCssMethod} />
     </div>
   );
 };
