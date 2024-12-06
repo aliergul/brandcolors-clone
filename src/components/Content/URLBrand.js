@@ -20,7 +20,6 @@ const URLBrand = () => {
   });
 
   useEffect(() => {
-    console.log("slugsData", slugsData);
     setSelectedBrands(slugsData);
   }, []); //eslint-disable-line
 

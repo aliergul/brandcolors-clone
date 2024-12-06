@@ -25,11 +25,6 @@ const Brands = ({ brand }) => {
   };
 
   useEffect(() => {
-    // if(slugs) {
-    //   setSelectedBrands(slugs.split(","))
-    // }else if(slug) {
-
-    // }
     setSelectedBrands(slugs ? slugs?.split(",") : []);
   }, []); //eslint-disable-line
 

@@ -7,6 +7,7 @@ import CopiedSnackbar from "components/CopiedSnackbar";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import URLData from "components/Content/URLCollection";
 import URLBrand from "components/Content/URLBrand";
+import { forceCheck } from "react-lazyload";
 
 function App() {
   const brandsArray = [];
@@ -41,6 +42,14 @@ function App() {
       clearTimeout(timeout);
     };
   }, [copied]);
+
+  useEffect(() => {
+    document.title = "BrandColors Demo | Ali Ergül";
+  }, []);
+
+  useEffect(() => {
+    forceCheck();
+  }, [brands]);
 
   return (
     <>

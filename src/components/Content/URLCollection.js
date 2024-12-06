@@ -5,6 +5,7 @@ import { useParams } from "react-router-dom";
 import LazyLoad from "react-lazyload";
 import Brands from "./Brands";
 import brandsData from "data/brands.json";
+import Loader from "components/Loader";
 
 const URLCollection = () => {
   const { slugs } = useParams();
@@ -30,7 +31,7 @@ const URLCollection = () => {
       </header>
       <section className="brands">
         {newBrands.map((brand, i) => (
-          <LazyLoad key={brand.slug} once={true} placeholder="Loading...">
+          <LazyLoad key={brand.slug} once={true} placeholder={<Loader />}>
             <Brands key={i} brand={brand} />
           </LazyLoad>
         ))}
