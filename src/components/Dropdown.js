@@ -35,7 +35,7 @@ const Dropdown = ({ selectedBrands, setCssMethod }) => {
   return (
     <div className="custom-dropdown" ref={dropdownRef}>
       <MdDownload onClick={() => setIsOpen((prev) => !prev)} />
-      {selectedBrands.length > 0 && isOpen && (
+      {selectedBrands?.length > 0 && isOpen && (
         <ul className="dropdown-options">
           {options.map((option) => (
             <li

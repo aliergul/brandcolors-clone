@@ -32,7 +32,7 @@ const Header = ({ isCollection = false }) => {
         </NavLink>
       )}
 
-      <div className={`tools ${selectedBrands.length > 0 ? "selected" : ""}`}>
+      <div className={`tools ${selectedBrands?.length > 0 ? "selected" : ""}`}>
         <Download />
         <Link />
         <Clear />

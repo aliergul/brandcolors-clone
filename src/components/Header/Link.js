@@ -17,7 +17,7 @@ const Link = () => {
       <IoMdLink
         onClick={() => selectedBrands?.length > 0 && handleLink()}
         style={{
-          "--color": `${selectedBrands.length > 0 ? "#617e8a" : "#cbd5d8"} `,
+          "--color": `${selectedBrands?.length > 0 ? "#617e8a" : "#cbd5d8"} `,
         }}
       />
     </div>

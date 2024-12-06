@@ -13,7 +13,7 @@ const Brands = ({ brand }) => {
     useContext(MainContext);
 
   const handleSelect = () => {
-    if (selectedBrands.includes(brand.slug)) {
+    if (selectedBrands?.includes(brand.slug)) {
       setSelectedBrands(selectedBrands.filter((slug) => slug !== brand.slug));
     } else {
       setSelectedBrands([...selectedBrands, brand.slug]);
@@ -25,18 +25,23 @@ const Brands = ({ brand }) => {
   };
 
   useEffect(() => {
-    setSelectedBrands(slugs ? slugs.split(",") : []);
+    // if(slugs) {
+    //   setSelectedBrands(slugs.split(","))
+    // }else if(slug) {
+
+    // }
+    setSelectedBrands(slugs ? slugs?.split(",") : []);
   }, []); //eslint-disable-line
 
   return (
     <div className="brands-main">
       <div
         className={`brand-items ${
-          selectedBrands.includes(brand.slug) ? "selected" : ""
+          selectedBrands?.includes(brand.slug) ? "selected" : ""
         }`}
       >
         <span onClick={handleSelect} className="brand-titles">
-          {selectedBrands.includes(brand.slug) && (
+          {selectedBrands?.includes(brand.slug) && (
             <MdDone className="done-icon" />
           )}
           {brand.title}
@@ -58,7 +63,7 @@ const Brands = ({ brand }) => {
           ))}
         </div>
       </div>
-      {selectedBrands.includes(brand.slug) && <BrandsFooter brand={brand} />}
+      {selectedBrands?.includes(brand.slug) && <BrandsFooter brand={brand} />}
     </div>
   );
 };

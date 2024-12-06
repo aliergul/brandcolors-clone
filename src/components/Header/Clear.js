@@ -8,7 +8,7 @@ const Clear = () => {
     <div>
       <RxCross2
         style={{
-          "--color": `${selectedBrands.length > 0 ? "#617e8a" : "#cbd5d8"} `,
+          "--color": `${selectedBrands?.length > 0 ? "#617e8a" : "#cbd5d8"} `,
         }}
         onClick={() => setSelectedBrands([])}
       />

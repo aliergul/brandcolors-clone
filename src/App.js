@@ -5,7 +5,8 @@ import { useEffect, useState } from "react";
 import brandsData from "data/brands.json";
 import CopiedSnackbar from "components/CopiedSnackbar";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-import URLData from "components/Content/URLData";
+import URLData from "components/Content/URLCollection";
+import URLBrand from "components/Content/URLBrand";
 
 function App() {
   const brandsArray = [];
@@ -50,6 +51,7 @@ function App() {
             <>
               <Route path="/" element={<Content />} />
               <Route path="/c/:slugs" element={<URLData />} />
+              <Route path="/b/:slug" element={<URLBrand />} />
             </>
           </Routes>
         </Router>

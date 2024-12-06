@@ -1,4 +1,5 @@
 import React from "react";
+import { NavLink } from "react-router-dom";
 
 const BrandsFooter = ({ brand }) => {
   const dateFormat = (dateString) => {
@@ -23,9 +24,9 @@ const BrandsFooter = ({ brand }) => {
         </a>
       )}
 
-      <a target="_blank" href="true" rel="noreferrer">
+      <NavLink className="return-all-brands" to={`/b/${brand.slug}`} end>
         Permalink
-      </a>
+      </NavLink>
     </div>
   );
 };

@@ -6,7 +6,7 @@ import LazyLoad from "react-lazyload";
 import Brands from "./Brands";
 import brandsData from "data/brands.json";
 
-const URLData = () => {
+const URLCollection = () => {
   const { slugs } = useParams();
   const { setSelectedBrands } = useContext(MainContext);
   const [slugsData, setSlugsData] = [slugs.split(",")]; //eslint-disable-line
@@ -39,4 +39,4 @@ const URLData = () => {
   );
 };
 
-export default URLData;
+export default URLCollection;

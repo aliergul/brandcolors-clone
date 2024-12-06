@@ -9,7 +9,7 @@ const Download = () => {
   const [skipCount, setSkipCount] = useState(true);
 
   const handleDownload = () => {
-    if (selectedBrands.length > 0) {
+    if (selectedBrands?.length > 0) {
       const blob = new Blob([
         downloadMethod(cssMethod, selectedBrands, brands),
       ]);
