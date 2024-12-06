@@ -20,6 +20,19 @@
       width: 100%;
       justify-content: space-between;
       margin-right: 10px;
+      margin-left: 10px;
+      .return-all-brands {
+        display: flex;
+        align-items: center;
+        font-size: 14px;
+        font-weight: 400;
+        gap: 5px;
+        color: #617e8a;
+        cursor: pointer;
+        &:hover {
+          color: black;
+        }
+      }
       .icon {
         position: absolute;
         top: 0;

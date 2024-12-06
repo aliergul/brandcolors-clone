@@ -6,6 +6,7 @@ import downloadMethod from "utils/downloadMethod";
 const Download = () => {
   const { brands, selectedBrands } = useContext(MainContext);
   const [cssMethod, setCssMethod] = useState("");
+  const [skipCount, setSkipCount] = useState(true);
 
   const handleDownload = () => {
     if (selectedBrands.length > 0) {
@@ -24,7 +25,12 @@ const Download = () => {
   };
 
   useEffect(() => {
-    handleDownload();
+    if (skipCount) {
+      setSkipCount(false);
+    }
+    if (!skipCount) {
+      handleDownload();
+    }
   }, [cssMethod]); //eslint-disable-line
 
   return (

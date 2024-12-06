@@ -4,6 +4,8 @@ import MainContext from "components/MainContext";
 import { useEffect, useState } from "react";
 import brandsData from "data/brands.json";
 import CopiedSnackbar from "components/CopiedSnackbar";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import URLData from "components/Content/URLData";
 
 function App() {
   const brandsArray = [];
@@ -43,7 +45,14 @@ function App() {
     <>
       <MainContext.Provider value={data}>
         <Sidebar />
-        <Content />
+        <Router>
+          <Routes>
+            <>
+              <Route path="/" element={<Content />} />
+              <Route path="/c/:slugs" element={<URLData />} />
+            </>
+          </Routes>
+        </Router>
         {copied && <CopiedSnackbar color={copied} />}
       </MainContext.Provider>
     </>

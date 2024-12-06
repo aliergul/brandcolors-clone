@@ -1,12 +1,14 @@
 import MainContext from "components/MainContext";
-import React, { useContext } from "react";
+import React, { useContext, useEffect } from "react";
 import getContrast from "utils/colorContrast";
 import { MdDone } from "react-icons/md";
 import { MdOutlineContentCopy } from "react-icons/md";
 import ClipboardButton from "react-clipboard.js";
 import BrandsFooter from "./BrandsFooter";
+import { useParams } from "react-router-dom";
 
 const Brands = ({ brand }) => {
+  const { slugs } = useParams();
   const { selectedBrands, setSelectedBrands, setCopied } =
     useContext(MainContext);
 
@@ -21,6 +23,10 @@ const Brands = ({ brand }) => {
   const handleCopy = (color) => {
     setCopied(color);
   };
+
+  useEffect(() => {
+    setSelectedBrands(slugs ? slugs.split(",") : []);
+  }, []); //eslint-disable-line
 
   return (
     <div className="brands-main">
