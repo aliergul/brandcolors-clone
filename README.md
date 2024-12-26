@@ -7,7 +7,7 @@ Bu projede React kullanarak BrandColors websitesini temel özellikleri ile birli
 
 
 
-## Kullanılan Teknolojiler - Paketler
+## 🧩 Kullanılan Teknolojiler - Paketler
 
 *Sass*
 
@@ -23,7 +23,7 @@ Bu projede React kullanarak BrandColors websitesini temel özellikleri ile birli
 
 *react-router-dom*
 
-## Ekran Görüntüleri
+## 📷 Ekran Görüntüleri
 
 ![image](https://github.com/user-attachments/assets/aaaf1f35-3ead-42b7-abc3-daf4643c7e51)
 ![image](https://github.com/user-attachments/assets/473c95e7-e02c-4284-bd9d-8c3c194d6196)
