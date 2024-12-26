@@ -1,70 +1,34 @@
-# Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# BrandColors - Clone
 
-## Available Scripts
+Bu projede React kullanarak BrandColors websitesini temel özellikleri ile birlikte klonlamayı amaçladım. Bu proje, farklı markalara ait renk paletlerini kolayca görüntülemek, renk kodlarını kopyalamak veya indirmek için tasarlanmıştır.
 
-In the project directory, you can run:
 
-### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
 
-### `npm test`
+## Kullanılan Teknolojiler - Paketler
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+*Sass*
 
-### `npm run build`
+*react-clipboard*
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+*react-content-loader*
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+*react-icons*
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+*react-lazyload*
 
-### `npm run eject`
+*react-modal*
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+*react-router-dom*
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Ekran Görüntüleri
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+![image](https://github.com/user-attachments/assets/aaaf1f35-3ead-42b7-abc3-daf4643c7e51)
+![image](https://github.com/user-attachments/assets/473c95e7-e02c-4284-bd9d-8c3c194d6196)
+![image](https://github.com/user-attachments/assets/2e32b50b-75c9-46b2-a1c1-3a56f27e1ed2)
+![image](https://github.com/user-attachments/assets/902c6793-8161-4943-aa0c-3468f545c003)
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
 
-## Learn More
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
