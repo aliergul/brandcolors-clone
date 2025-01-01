@@ -3,9 +3,7 @@
 
 Bu projede React kullanarak BrandColors websitesini temel özellikleri ile birlikte klonlamayı amaçladım. Bu proje, farklı markalara ait renk paletlerini kolayca görüntülemek, renk kodlarını kopyalamak veya indirmek için tasarlanmıştır.
 
-
-
-
+https://brandcolors-ali-ergul.netlify.app/
 
 ## 🧩 Kullanılan Teknolojiler - Paketler
 
